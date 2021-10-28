@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../convert-bot/.idea/convert-bot.iml" filepath="$PROJECT_DIR$/../convert-bot/.idea/convert-bot.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myWebSite.iml" filepath="$PROJECT_DIR$/.idea/myWebSite.iml" />
     </modules>
   </component>
