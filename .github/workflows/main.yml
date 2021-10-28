@@ -41,15 +41,13 @@ jobs:
     needs: build_and_push
 
     steps:
-      - name: Connect to Digital Ocean via SSH action
-        uses: fifsky/ssh-action@v0.0.6
+      - name: Deploy to Digital Ocean droplet via SSH action
+        uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          user: ${{ secrets.USERNAME }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
-
-      -name: Deploy to Digital Ocean droplet
           envs: IMAGE_NAME,REGISTRY,GITHUB_SHA,LOGS_PATH,CONTAINER_NAME
           script: |
             # Login into Digital Ocean Registry
